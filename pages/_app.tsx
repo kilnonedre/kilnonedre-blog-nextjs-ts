@@ -1,6 +1,21 @@
-import '@/styles/globals.css'
+import '@/styles/basic.scss'
 import type { AppProps } from 'next/app'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { NextPageContext } from 'next'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const App = ({ Component, pageProps }: AppProps) => {
+  if ((Component as any).getLayout) {
+    return (Component as any).getLayout(<Component {...pageProps} />)
+  }
+
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  )
 }
+
+export default App

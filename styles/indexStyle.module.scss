@@ -1,0 +1,63 @@
+.cover {
+  height: 100vh;
+  background-image: url('../public/images/cover.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &-mask {
+    position: relative;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  &-title {
+    font-size: 80px;
+    width: 350px;
+    font-weight: bold;
+  }
+  &-leaveEmail {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 350px;
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    > input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      flex-grow: 1;
+      text-align: left;
+      cursor: text;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    > p {
+      background-color: white;
+      padding: 4px 8px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.enter {
+  background-color: red;
+  position: absolute;
+  bottom: 10%;
+  right: -80%;
+  width: 100px;
+  height: 50px;
+}
