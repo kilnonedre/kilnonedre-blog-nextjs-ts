@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Router from 'next/router'
 import styles from '/styles/indexStyle.module.scss'
 
-// 展示背景图片
-const showBackground = () => {
-  console.log('click')
-}
-
 const Cover = () => {
+  const [buttonPosition, setButtonPosition] = useState('enter--show')
+  const [maskPosition, setMaskPosition] = useState('cover-mask--show')
+
+  // 展示背景图片
+  const showBackground = () => {
+    const buttonState =
+      buttonPosition === 'enter--show' ? 'enter--hide' : 'enter--show'
+    const maskState =
+      maskPosition === 'cover-mask--show'
+        ? 'cover-mask--hide'
+        : 'cover-mask--show'
+    setButtonPosition(buttonState)
+    setMaskPosition(maskState)
+  }
+
   return (
     <div className={styles['cover']} onDoubleClick={showBackground}>
-      <div className={styles['cover-mask']}>
+      <div className={`${styles['cover-mask']} ${styles[maskPosition]}`}>
         <div className={styles['content']}>
           <p className={styles['content-title']}>Welcome to Yume</p>
           <p>
@@ -26,7 +36,9 @@ const Cover = () => {
             <div>确认</div>
           </div>
         </div>
-        <div className={styles['enter']} onClick={() => Router.push('/home')}>
+        <div
+          className={`${styles['enter']} ${styles[buttonPosition]}`}
+          onClick={() => Router.push('/home')}>
           enter
         </div>
       </div>
