@@ -1,0 +1,9 @@
+// @import '~/styles/mixinStyle.scss';
+.panel {
+  height: 100%;
+  width: 100%;
+  @include flex($x: space-between);
+}
+
+.loading {
+}
