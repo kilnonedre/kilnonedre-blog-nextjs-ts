@@ -1,8 +1,8 @@
-import '@/styles/basic.scss'
+import '@/styles/fontStyle.scss'
+import '@/styles/formatStyle.scss'
 import type { AppProps } from 'next/app'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import { NextPageContext } from 'next'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 const App = ({ Component, pageProps }: AppProps) => {
   if ((Component as any).getLayout) {

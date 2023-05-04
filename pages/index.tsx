@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
 import styles from '/styles/indexStyle.module.scss'
+import { ArrowRightOutlined } from '@ant-design/icons'
 
 const Cover = () => {
   const [buttonPosition, setButtonPosition] = useState('enter--show')
@@ -30,10 +31,14 @@ const Cover = () => {
             <br />
             而是你在特殊的时间里给了我别人给不了的感觉！
           </p>
-          <div className={styles['content-leaveEmail']}>
-            <p>SUBSCRIBE</p>
-            <input type='text' placeholder='Enter Your Email' />
-            <div>确认</div>
+          <div className={styles['content-email']}>
+            <p className={styles['content-email-subscribe']}>SUBSCRIBE</p>
+            <input type='email' placeholder='Enter Your Email' />
+            <div className={styles['content-email-confirm']}>
+              <ArrowRightOutlined
+                className={styles['content-email-confirm-icon']}
+              />
+            </div>
           </div>
         </div>
         <div
