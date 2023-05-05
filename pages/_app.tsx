@@ -1,4 +1,3 @@
-import '@/styles/fontStyle.scss'
 import '@/styles/formatStyle.scss'
 import type { AppProps } from 'next/app'
 import Header from '@/components/layout/Header'

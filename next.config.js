@@ -8,7 +8,6 @@ const regexEqual = (x, y) =>
   x.ignoreCase === y.ignoreCase &&
   x.multiline === y.multiline;
 
-
 const nextConfig = {
   reactStrictMode: true,
   webpack (config) {
@@ -26,7 +25,7 @@ const nextConfig = {
           options: {
             ...rule.options,
             //引入你的全局样式
-            additionalData: `@import '~/styles/mixinStyle.scss';`,
+            additionalData: `@import '~/styles/abstracts/indexStyle.scss';`,
           },
         }
         : rule
