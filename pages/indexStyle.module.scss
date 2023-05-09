@@ -28,8 +28,12 @@
   transform: translateY(-50%);
   &-title {
     font-size: 80px;
-    width: 350px;
+    width: 380px;
     font-weight: bold;
+    font-family: 'agendaKing';
+  }
+  &-sentence {
+    font-family: 'zixinfangGothic';
   }
   &-email {
     display: flex;
@@ -60,9 +64,14 @@
     }
     &-confirm {
       color: #ffffff;
+      cursor: pointer;
       &-icon {
+        cursor: inherit;
         > svg {
-          cursor: pointer;
+          cursor: inherit;
+          > path {
+            cursor: inherit;
+          }
         }
       }
     }
