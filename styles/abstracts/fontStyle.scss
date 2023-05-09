@@ -8,3 +8,23 @@
     url('~/assets/fonts/iconfont/icomoon.woff?kbbxn2') format('woff'),
     url('~/assets/fonts/iconfont/icomoon.svg?kbbxn2#icomoon') format('svg');
 }
+
+@font-face {
+  font-family: 'blackAng';
+  src: url('~/assets/fonts/cover/blackAng/blackAng.woff') format('woff'),
+    url('~/assets/fonts/cover/blackAng/blackAng.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'agendaKing';
+  src: url('~/assets/fonts/cover/agendaKing/agendaKing.woff') format('woff'),
+    url('~/assets/fonts/cover/agendaKing/agendaKing.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'zixinfangGothic';
+  src: url('~/assets/fonts/cover/zixinfangGothic/zixinfangGothic.woff')
+      format('woff'),
+    url('~/assets/fonts/cover/zixinfangGothic/zixinfangGothic.woff2')
+      format('woff2');
+}
