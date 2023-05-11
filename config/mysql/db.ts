@@ -7,7 +7,7 @@ const mysqlAdminData = mysql.createPool({
   database: 'kil_blog_next'
 })
 
-const query = function (sql: string, values: Array<string>) {
+const query = function (sql: string, values: Array<Array<Array<string>>>) {
   return new Promise((resolve, reject) => {
     mysqlAdminData.getConnection((err, connection) => {
       if (err) {
