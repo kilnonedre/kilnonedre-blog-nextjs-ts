@@ -1,0 +1,20 @@
+.button {
+  @include flex($wrap: nowrap);
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 2/1;
+  &-text {
+    @include flex();
+    margin: auto;
+    height: 100%;
+    font-size: 40px;
+    cursor: pointer;
+    color: #8c6845;
+    font-family: 'agendaKing';
+  }
+  &-image {
+    cursor: pointer;
+    height: 100%;
+    padding-left: 10px;
+  }
+}
