@@ -1,7 +1,7 @@
 import '@/styles/formatStyle.scss'
 import type { AppProps } from 'next/app'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+import Header from '@/views/layout/Header'
+import Footer from '@/views/layout/Footer'
 
 const App = ({ Component, pageProps }: AppProps) => {
   if ((Component as any).getLayout) {

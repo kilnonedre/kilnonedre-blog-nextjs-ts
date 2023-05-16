@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
-import styles from '/styles/indexStyle.module.scss'
+import styles from './indexStyle.module.scss'
 import { ArrowRightOutlined } from '@ant-design/icons'
+import http from '@/config/http'
+import Button from '@/components/button'
+
+// const subscribe = async () => {
+//   const res = await http.post('http://localhost:3000/api/subscriptions', {
+//     test: 'test'
+//   })
+// }
 
 const Cover = () => {
   const [buttonPosition, setButtonPosition] = useState('enter--show')
@@ -19,12 +27,23 @@ const Cover = () => {
     setMaskPosition(maskState)
   }
 
+  const [inputValue, setInputValue] = useState<null | HTMLInputElement>(null)
+
+  const subscribe = async () => {
+    console.log(inputValue && inputValue.value)
+    const res = await http.post('http://localhost:3000/api/subscriptions', {
+      email: inputValue && inputValue.value
+    })
+    const data = await res.json()
+    data.code === 200 && inputValue && (inputValue.value = '')
+  }
+
   return (
     <div className={styles['cover']} onDoubleClick={showBackground}>
       <div className={`${styles['cover-mask']} ${styles[maskPosition]}`}>
         <div className={styles['content']}>
           <p className={styles['content-title']}>Welcome to Yume</p>
-          <p>
+          <p className={styles['content-sentence']}>
             我喜欢你，
             <br />
             并不是因为你长得好不好看，
@@ -33,8 +52,14 @@ const Cover = () => {
           </p>
           <div className={styles['content-email']}>
             <p className={styles['content-email-subscribe']}>SUBSCRIBE</p>
-            <input type='email' placeholder='Enter Your Email' />
-            <div className={styles['content-email-confirm']}>
+            <input
+              type='email'
+              placeholder='Enter Your Email'
+              ref={input => setInputValue(input)}
+            />
+            <div
+              className={styles['content-email-confirm']}
+              onClick={subscribe}>
               <ArrowRightOutlined
                 className={styles['content-email-confirm-icon']}
               />
@@ -44,7 +69,7 @@ const Cover = () => {
         <div
           className={`${styles['enter']} ${styles[buttonPosition]}`}
           onClick={() => Router.push('/home')}>
-          enter
+          <Button buttonName={'Enter'}></Button>
         </div>
       </div>
     </div>

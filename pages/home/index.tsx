@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './homeStyle.module.scss'
-import Carousel from '@/components/home/Carousel'
+import Carousel from '@/views/home/Carousel'
 
 const titleList = [
   {

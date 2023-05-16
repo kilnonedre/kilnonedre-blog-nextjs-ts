@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './headerStyle.module.scss'
 import { useRouter } from 'next/router'
+import logo from '@/assets/images/logo/logo.jpg'
 
 const navList = ['Home', 'Connect', 'Sign u', 'Login']
 
@@ -13,7 +14,7 @@ const Header = () => {
   return (
     <header className={styles['header']}>
       <div className={styles['header-logo']} onClick={toCoverPage}>
-        logo
+        <img src={logo.src} alt='logo' />
       </div>
       <nav className={styles['header-nav']}>
         {navList.map((nav, index) => {
