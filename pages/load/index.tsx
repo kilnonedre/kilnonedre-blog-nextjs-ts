@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import styles from './loadStyle.module.scss'
 
-const test = 1
+const test = 11
 
 const Loading = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
