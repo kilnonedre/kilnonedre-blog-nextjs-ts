@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit": "next lint",
-    "commit-msg": "commitlint -E GIT_PARAMS"
+    "pre-commit": "next lint"
   },
   "dependencies": {
     "@types/mysql": "^2.15.21",
@@ -34,6 +33,8 @@
     "commit-msg": "commitlint -E GIT_PARAMS"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "husky": "^8.0.3"
   }
 }
