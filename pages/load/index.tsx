@@ -1,16 +1,18 @@
-import React from 'react'
-import styles from './loadStyle.module.scss'
+import React, { useRef, useEffect } from "react";
+import styles from "./loadStyle.module.scss";
 
 const Loading = () => {
-  return (
-    <div className={styles['panel']}>
-      <div>loading</div>
-    </div>
-  )
-}
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    return (
+        <div className={styles["panel"]}>
+            <div>loading</div>
+            <canvas ref={canvasRef} width="600px" height="600px"></canvas>
+        </div>
+    );
+};
 
-export default Loading
+export default Loading;
 
 Loading.getLayout = (page: Document) => {
-  return <>{page}</>
-}
+    return <>{page}</>;
+};

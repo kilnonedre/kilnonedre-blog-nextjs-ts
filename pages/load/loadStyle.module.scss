@@ -1,9 +1,6 @@
 // @import '~/styles/mixinStyle.scss';
 .panel {
-  height: 100%;
-  width: 100%;
-  @include flex($x: space-between);
-}
-
-.loading {
+  height: 100vh;
+  width: 100vw;
+  @include flex($x: center, $y: center, $wrap: nowrap);
 }
