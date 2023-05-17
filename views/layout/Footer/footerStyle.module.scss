@@ -7,16 +7,9 @@
     padding: 0 100px;
     &-contact {
       color: white;
-      font-family: 'iconfont' !important;
+      font-family: 'iconfont';
       display: flex;
       justify-content: space-between;
     }
-  }
-}
-
-.foote {
-  &:before {
-    content: '\e901';
-    font-family: 'iconfont' !important;
   }
 }
