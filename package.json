@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit": "next lint"
+    "pre-commit": "next lint",
+    "commit-msg": "commitlint -E GIT_PARAMS"
   },
   "dependencies": {
     "@types/mysql": "^2.15.21",
