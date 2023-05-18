@@ -28,10 +28,6 @@
     "tailwindcss": "3.3.1",
     "typescript": "5.0.3"
   },
-  "gitHooks": {
-    "pre-commit": "yarn lint",
-    "commit-msg": "commitlint -E GIT_PARAMS"
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",

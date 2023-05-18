@@ -32,7 +32,7 @@ const Cover = () => {
   const subscribe = async () => {
     console.log(inputValue && inputValue.value)
     const res = await http.post('http://localhost:3000/api/subscriptions', {
-      email: inputValue && inputValue.value
+      email: inputValue && inputValue.value,
     })
     const data = await res.json()
     data.code === 200 && inputValue && (inputValue.value = '')
@@ -53,13 +53,14 @@ const Cover = () => {
           <div className={styles['content-email']}>
             <p className={styles['content-email-subscribe']}>SUBSCRIBE</p>
             <input
-              type='email'
-              placeholder='Enter Your Email'
+              type="email"
+              placeholder="Enter Your Email"
               ref={input => setInputValue(input)}
             />
             <div
               className={styles['content-email-confirm']}
-              onClick={subscribe}>
+              onClick={subscribe}
+            >
               <ArrowRightOutlined
                 className={styles['content-email-confirm-icon']}
               />
@@ -68,7 +69,8 @@ const Cover = () => {
         </div>
         <div
           className={`${styles['enter']} ${styles[buttonPosition]}`}
-          onClick={() => Router.push('/home')}>
+          onClick={() => Router.push('/home')}
+        >
           <Button buttonName={'Enter'}></Button>
         </div>
       </div>
