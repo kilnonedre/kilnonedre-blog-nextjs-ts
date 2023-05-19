@@ -1,7 +1,16 @@
-.title {
-  border-bottom: 1px solid gray;
-  font-size: 18px;
-  font-weight: bold;
-  padding-bottom: 15px;
-  margin-bottom: 60px;
+.home {
+  min-height: calc(100vh - $height-footer - $height-header);
+  width: $min-width;
+  margin: 0 auto;
+  overflow: hidden;
+  &-module {
+    margin: 50px 0 15px 0;
+    &-theme {
+      border-bottom: 1px solid gray;
+      font-size: 18px;
+      font-weight: bold;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+  }
 }

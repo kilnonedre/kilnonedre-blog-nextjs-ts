@@ -1,0 +1,62 @@
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+  @include flex();
+  &-image,
+  &-text {
+    width: 50%;
+    aspect-ratio: 8/5;
+    overflow: hidden;
+  }
+  &-image {
+    img {
+      max-width: 100%;
+    }
+  }
+  &-text {
+    @include flex();
+    color: #ffffff;
+    background-image: url('~/assets/images/cover.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    &-outer {
+      width: 80%;
+      &-msg {
+        @include flex($x: flex-start);
+        column-gap: 15px;
+        margin-bottom: 15px;
+        &-divide {
+          border: 1px solid #ffffff;
+          height: 10px;
+        }
+      }
+      &-title {
+        font-size: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &-content {
+        margin: 15px 0 40px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        text-indent: 2em;
+      }
+      &-misc {
+        @include flex($x: space-between);
+        &-show {
+          cursor: pointer;
+          &-arrow {
+            font-family: 'iconfont';
+            padding-left: 10px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
