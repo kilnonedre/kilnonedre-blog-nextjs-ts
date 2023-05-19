@@ -2,9 +2,8 @@ import React from 'react'
 import styles from './headerStyle.module.scss'
 import { useRouter } from 'next/router'
 import logo from '@/assets/images/logo/logo.jpg'
-import person from '@/assets/images/avatar/person.png'
 
-const test = 11
+const eeee = 111
 
 const Header = () => {
   const router = useRouter()
@@ -21,9 +20,7 @@ const Header = () => {
         <div className={styles['header-nav-icon']}></div>
         <div className={styles['header-nav-icon']}></div>
         <div className={styles['header-nav-divide']}></div>
-        <div className={styles['header-nav-avatar']}>
-          <img src={person.src} alt="用户头像" />
-        </div>
+        <div className={styles['header-nav-avatar']}></div>
       </div>
     </header>
   )
