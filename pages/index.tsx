@@ -3,7 +3,7 @@ import Router from 'next/router'
 import styles from './indexStyle.module.scss'
 import { ArrowRightOutlined } from '@ant-design/icons'
 import http from '@/config/http'
-import Button from '@/components/button'
+import Button from '@/components/Button'
 
 // const subscribe = async () => {
 //   const res = await http.post('http://localhost:3000/api/subscriptions', {

@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './homeStyle.module.scss'
-import Carousel from '@/views/home/Carousel'
+import NewAndTrendy from '@/views/home/NewAndTrendy'
 
 const titleList = [
   {
     name: 'New & Trendy',
-    component: <Carousel />,
+    component: <NewAndTrendy />,
   },
   {
     name: 'Now Trending',

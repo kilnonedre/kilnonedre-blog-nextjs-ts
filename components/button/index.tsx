@@ -1,6 +1,6 @@
 import React from 'react'
 import type from './index.d'
-import style from './indexStyle.module.scss'
+import style from './buttonStyle.module.scss'
 import img from '@/assets/icons/arrowEnter.png'
 
 const Button = (props: type.props) => {
