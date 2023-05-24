@@ -1,0 +1,6 @@
+.panel {
+  @include flex($x: space-between);
+  &-card {
+    width: 30%;
+  }
+}

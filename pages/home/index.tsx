@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './homeStyle.module.scss'
 import NewAndTrendy from '@/views/home/NewAndTrendy'
+import NowTrending from '@/views/home/NowTrending'
 
 const titleList = [
   {
@@ -9,7 +10,7 @@ const titleList = [
   },
   {
     name: 'Now Trending',
-    component: 1,
+    component: <NowTrending />,
   },
   {
     name: 'Short Reads',
