@@ -1,0 +1,6 @@
+.panel {
+  @include flex($x: space-between);
+  &-label {
+    width: 30%;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './homeStyle.module.scss'
 import NewAndTrendy from '@/views/home/NewAndTrendy'
 import NowTrending from '@/views/home/NowTrending'
+import ShortRead from '@/views/home/ShortRead'
 
 const titleList = [
   {
@@ -14,7 +15,7 @@ const titleList = [
   },
   {
     name: 'Short Reads',
-    component: 1,
+    component: <ShortRead />,
   },
   {
     name: 'Blog',
