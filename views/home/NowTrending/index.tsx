@@ -19,7 +19,7 @@ const NowTrending = () => {
     <div className={styles['panel']}>
       {cardList.map((card, index) => {
         return (
-          <div className={styles['panel-card']}>
+          <div className={styles['panel-card']} key={index}>
             <Card />
           </div>
         )
