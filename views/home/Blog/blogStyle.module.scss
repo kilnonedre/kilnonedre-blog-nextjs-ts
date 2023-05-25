@@ -1,0 +1,51 @@
+.blog {
+  &-nav {
+    @include flex($x: flex-start);
+    column-gap: 30px;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 5px;
+    &-subtype {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  &-story {
+    @include flex($x: space-between, $wrap: nowrap);
+    margin-top: 20px;
+    width: 100%;
+    &-update,
+    &-manga {
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    &-update {
+      width: 60%;
+      @include flex($x: space-between, $y: flex-start, $wrap: nowrap);
+      column-gap: 25px;
+      &-prominent {
+        width: 50%;
+      }
+      &-outer {
+        width: 50%;
+        height: 600px;
+        overflow: hidden;
+        &-list {
+          @include flex($x: space-between, $y: flex-start, $dir: column);
+          row-gap: 30px;
+        }
+      }
+    }
+    &-manga {
+      width: 31.5%;
+      &-outer {
+        height: 600px;
+        overflow: hidden;
+        &-list {
+          @include flex($x: space-between, $y: flex-start, $dir: column);
+          row-gap: 30px;
+        }
+      }
+    }
+  }
+}

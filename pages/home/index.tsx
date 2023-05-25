@@ -3,6 +3,7 @@ import styles from './homeStyle.module.scss'
 import NewAndTrendy from '@/views/home/NewAndTrendy'
 import NowTrending from '@/views/home/NowTrending'
 import ShortRead from '@/views/home/ShortRead'
+import Blog from '@/views/home/Blog'
 
 const titleList = [
   {
@@ -19,7 +20,7 @@ const titleList = [
   },
   {
     name: 'Blog',
-    component: 1,
+    component: <Blog />,
   },
 ]
 
