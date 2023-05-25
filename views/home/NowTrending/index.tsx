@@ -16,10 +16,10 @@ const cardList = [
 
 const NowTrending = () => {
   return (
-    <div className={styles['panel']}>
+    <div className={styles['trendy']}>
       {cardList.map((card, index) => {
         return (
-          <div className={styles['panel-card']} key={index}>
+          <div className={styles['trendy-card']} key={index}>
             <Card />
           </div>
         )

@@ -16,10 +16,10 @@ const labelList = [
 
 const ShortRead = () => {
   return (
-    <div className={styles['panel']}>
+    <div className={styles['read']}>
       {labelList.map((label, index) => {
         return (
-          <div className={styles['panel-label']} key={index}>
+          <div className={styles['read-label']} key={index}>
             <Label />
           </div>
         )
