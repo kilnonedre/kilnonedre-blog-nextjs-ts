@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './blogStyle.module.scss'
-import Card from '@/components/Card'
-import Label from '@/components/Label'
+import Card from '@/components/card'
+import Label from '@/components/label'
 
 const subtypeList = [
   {

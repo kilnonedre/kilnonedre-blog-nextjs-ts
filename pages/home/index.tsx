@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './homeStyle.module.scss'
-import NewAndTrendy from '@/views/home/NewAndTrendy'
-import NowTrending from '@/views/home/NowTrending'
-import ShortRead from '@/views/home/ShortRead'
-import Blog from '@/views/home/Blog'
+import NewAndTrendy from '@/views/home/newAndTrendy'
+import NowTrending from '@/views/home/nowTrending'
+import ShortRead from '@/views/home/shortRead'
+import Blog from '@/views/home/blog'
 
 const titleList = [
   {

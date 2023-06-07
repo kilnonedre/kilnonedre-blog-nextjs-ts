@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './shortReadStyle.module.scss'
-import Label from '@/components/Label'
+import Label from '@/components/label'
 
 const labelList = [
   {
