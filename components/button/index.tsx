@@ -1,13 +1,13 @@
 import React from 'react'
-import type from './index.d'
-import style from './buttonStyle.module.scss'
+import types from './buttonType.d'
+import styles from './buttonStyle.module.scss'
 import img from '@/assets/icons/arrowEnter.png'
 
-const Button = (props: type.props) => {
+const Button = (props: types.ConfigProps) => {
   return (
-    <div className={style['button']}>
-      <h1 className={style['button-text']}>{props.buttonName}</h1>
-      <img className={style['button-image']} src={img.src} alt="arrowEnter" />
+    <div className={styles['button']}>
+      <h1 className={styles['button-text']}>{props.buttonName}</h1>
+      <img className={styles['button-image']} src={img.src} alt="arrowEnter" />
     </div>
   )
 }
