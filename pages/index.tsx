@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import Router from 'next/router'
 import styles from './indexStyle.module.scss'
-import { ArrowRightOutlined } from '@ant-design/icons'
 import http from '@/config/http'
-import Button from '@/components/Button'
+import Button from '@/components/button'
 
 // const subscribe = async () => {
 //   const res = await http.post('http://localhost:3000/api/subscriptions', {
@@ -61,9 +60,7 @@ const Cover = () => {
               className={styles['content-email-confirm']}
               onClick={subscribe}
             >
-              <ArrowRightOutlined
-                className={styles['content-email-confirm-icon']}
-              />
+              <p className={styles['content-email-confirm-icon']}></p>
             </div>
           </div>
         </div>

@@ -67,12 +67,7 @@
       cursor: pointer;
       &-icon {
         cursor: inherit;
-        > svg {
-          cursor: inherit;
-          > path {
-            cursor: inherit;
-          }
-        }
+        font-family: 'iconfont';
       }
     }
   }
