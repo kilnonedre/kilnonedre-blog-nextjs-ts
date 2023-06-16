@@ -1,7 +1,17 @@
-@mixin flex($flex: flex, $dir: row, $x: center, $y: center, $wrap: wrap) {
+@mixin flex(
+  $flex: flex,
+  $dir: row,
+  $x: center,
+  $y: center,
+  $wrap: wrap,
+  $xGap: normal,
+  $yGap: normal
+) {
   display: $flex;
   flex-direction: $dir;
   justify-content: $x;
   align-items: $y;
   flex-wrap: $wrap;
+  column-gap: $xGap;
+  row-gap: $yGap;
 }
