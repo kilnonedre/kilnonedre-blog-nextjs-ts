@@ -7,12 +7,19 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: default;
-  font-size: 16px;
   -webkit-user-drag: none;
   box-sizing: border-box;
 }
 
 li {
   list-style: none;
+}
+
+h1,
+p {
+  letter-spacing: 0em;
+}
+
+html {
+  font-size: 16px;
 }
