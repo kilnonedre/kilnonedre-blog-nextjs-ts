@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './homeStyle.module.scss'
-import NewAndTrendy from '@/views/home/newAndTrendy'
-import NowTrending from '@/views/home/nowTrending'
-import ShortRead from '@/views/home/shortRead'
-import Blog from '@/views/home/blog'
+import { homeLayout } from '@/utils/layout'
+import NewAndTrendy from '@/views/home/index/newAndTrendy'
+import NowTrending from '@/views/home/index/nowTrending'
+import ShortRead from '@/views/home/index/shortRead'
+import Blog from '@/views/home/index/blog'
 
 const titleList = [
   {
@@ -42,3 +43,5 @@ const Home = () => {
 }
 
 export default Home
+
+homeLayout(Home)

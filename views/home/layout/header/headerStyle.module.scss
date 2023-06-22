@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  position: relative;
+  height: $height-header;
+  z-index: 10;
+  box-shadow: 0px 1px 5px gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  &-logo {
+    height: 60%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    img {
+      cursor: pointer;
+      height: 100%;
+      aspect-ratio: 1/1;
+    }
+  }
+  &-nav {
+    font-family: 'iconFont';
+    height: 100%;
+    @include flex();
+    column-gap: 30px;
+    &-icon {
+      font-size: 25px;
+    }
+    &-avatar {
+      font-size: 30px;
+      cursor: pointer;
+    }
+    &-divide {
+      border: 1px solid #000000;
+      height: 50%;
+    }
+  }
+}
+
+// 下拉面板中粗略信息的样式
+.information {
+  padding-top: 10px;
+  @include flex($dir: column);
+  &-text {
+    @include flex($dir: column);
+    margin-bottom: 15px;
+  }
+  &-level {
+    width: 100%;
+    @include flex($wrap: nowrap, $xGap: 5px);
+    &-progress {
+      width: 100%;
+    }
+    &-grade {
+      font-size: 14px;
+    }
+  }
+  &-tip {
+    font-size: 12px;
+    line-height: 1em;
+    margin-bottom: 10px;
+  }
+  &-data {
+    margin-bottom: 10px;
+    padding: 0 20px;
+    @include flex($x: space-between);
+    width: 100%;
+    &-single {
+      @include flex($dir: column);
+      p {
+        line-height: 1.5em;
+        color: #000000;
+      }
+      &-number {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      &-subtype {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// 下拉列表的标签样式
+.tag {
+  @include flex($x: flex-start, $xGap: 10px);
+  font-size: 14px;
+  font-family: 'iconFont';
+  &-enter {
+    margin-left: auto;
+  }
+}

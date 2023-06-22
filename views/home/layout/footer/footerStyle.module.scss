@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  height: $height-footer;
+  background-color: #1c1c1c;
+  box-sizing: border-box;
+  &-body {
+    padding: 20px 100px;
+    height: 100%;
+    @include flex($x: space-between, $dir: column, $wrap: nowrap);
+    column-gap: 50px;
+    &-sentence {
+      color: white;
+    }
+    &-misc {
+      color: white;
+      width: $min-width/1.5;
+      @include flex($x: space-between, $dir: column, $wrap: nowrap);
+      &-contact {
+        font-family: 'iconFont';
+        @include flex($x: space-between, $wrap: nowrap);
+        width: 40%;
+        &-icon {
+          padding: 8px;
+          border-radius: 10px;
+          background-color: #282828;
+          cursor: pointer;
+        }
+      }
+      &-divide {
+        width: 100%;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0),
+          rgb(255, 255, 255),
+          rgba(0, 0, 0, 0)
+        );
+        height: 1px;
+        border: none;
+        margin-top: 10px;
+      }
+    }
+  }
+}
